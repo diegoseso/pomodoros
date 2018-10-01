@@ -1,0 +1,8 @@
+#! /bin/bash
+
+TASK_FILENAME="tasks"
+
+NUM_OF_TASKS=$(wc -l ${TASK_FILENAME}|awk '{print $1}')
+NEW_NUM_OF_TASKS=$((${NUM_OF_TASKS}+1))
+echo -e "${NEW_NUM_OF_TASKS}\t${1}" >> ${TASK_FILENAME}
+
